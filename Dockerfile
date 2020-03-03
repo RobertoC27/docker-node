@@ -5,10 +5,12 @@ FROM node:alpine
 WORKDIR /usr/app
 
 # Set package.json
-COPY ./ ./
+COPY ./package.json ./
 
 # Install dependencies
 RUN npm install
+
+COPY index.js ./
 
 # Default command
 CMD [ "npm", "start" ]
