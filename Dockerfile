@@ -2,7 +2,7 @@
 FROM node:alpine
 
 # Set package.json
-COPY package.json .
+COPY ./ ./
 
 # Install dependencies
 RUN npm install
